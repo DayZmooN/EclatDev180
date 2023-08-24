@@ -310,8 +310,17 @@ body {
     .student {
         width: 100%;
         margin: 100px auto;
-        // overflow: scroll;
-        // height: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; // Centrer verticalement
+        height: auto;
+        overflow: hidden; // Pas de défilement ici
+
+        @media screen and (max-width:770px) {
+            height: initial;
+            overflow: auto;
+        }
 
 
         .h2-student {
@@ -320,28 +329,49 @@ body {
             color: #161B3D;
             font: 600;
             font-size: 2rem;
+            margin: 100px auto;
+
         }
 
         .container-card-student {
             width: 100%;
-            // max-width: 900px;
-            // padding: 20px
-            overflow: scroll;
+            // max-width: 900px; // Limiter la largeur si nécessaire
+            margin: 50px auto; // Centrer horizontalement
+            overflow-y: auto; // Permettre le défilement vertical
+            overflow-x: hidden;
+            height: 1300px;
+
+            z-index: 555;
+            // Ajouter une transition pour l'effet de mise à l'échelle
+            transition: transform 0.3s ease;
+
+            @media screen and (max-width:770px) {
+                height: initial;
+                overflow: auto;
+            }
 
             .card,
             .card-2 {
                 width: 100%;
+                height: 100vh;
+                max-height: 90vh;
                 display: flex;
+                gap: 10px;
+                align-items: center;
+
                 // max-width: 900px;
                 justify-content: center;
-                // margin: 10px auto;
-                // gap: 10px;
-                margin: 100px auto;
+
                 // padding: 20px;
                 // background-color: #000000;
-                border: 1px solid red;
+                // border: 1px solid red;
 
                 // align-items: center;
+
+                @media screen and (max-width:770px) {
+                    height: 63vh;
+
+                }
 
                 .picture-profil-student {
                     width: 450px;
@@ -351,8 +381,18 @@ body {
                     gap: 20px;
                     border-radius: 8px;
 
+                    @media screen and (max-width:770px) {
+                        align-items: center;
+
+                    }
+
                     .image-student {
                         width: 100%;
+
+                        @media screen and (max-width:770px) {
+                            width: 95%;
+
+                        }
                     }
 
                     .profil-student {
@@ -466,6 +506,16 @@ body {
             .card-2 {
                 flex-direction: row-reverse;
                 background: #000000;
+                color: #fff;
+
+
+
+                #span-card-2 {
+                    color: #ffffff;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+
             }
         }
     }
@@ -524,6 +574,12 @@ body {
                         gap: 15px;
                         align-items: center;
                         justify-content: space-between;
+
+                        @media screen and (max-width:500px) {
+                            flex-direction: column;
+                            align-items: start;
+
+                        }
 
 
                         .title-name {

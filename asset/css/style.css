@@ -233,6 +233,18 @@ body .hero-home .title-hero-picture .title-span {
 body .student {
   width: 100%;
   margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 770px) {
+  body .student {
+    height: initial;
+    overflow: auto;
+  }
 }
 body .student .h2-student {
   text-align: center;
@@ -240,18 +252,38 @@ body .student .h2-student {
   color: #161B3D;
   font: 600;
   font-size: 2rem;
+  margin: 100px auto;
 }
 body .student .container-card-student {
   width: 100%;
-  overflow: scroll;
+  margin: 50px auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 1300px;
+  z-index: 555;
+  transition: transform 0.3s ease;
+}
+@media screen and (max-width: 770px) {
+  body .student .container-card-student {
+    height: initial;
+    overflow: auto;
+  }
 }
 body .student .container-card-student .card,
 body .student .container-card-student .card-2 {
   width: 100%;
+  height: 100vh;
+  max-height: 90vh;
   display: flex;
+  gap: 10px;
+  align-items: center;
   justify-content: center;
-  margin: 100px auto;
-  border: 1px solid red;
+}
+@media screen and (max-width: 770px) {
+  body .student .container-card-student .card,
+  body .student .container-card-student .card-2 {
+    height: 63vh;
+  }
 }
 body .student .container-card-student .card .picture-profil-student,
 body .student .container-card-student .card-2 .picture-profil-student {
@@ -262,9 +294,21 @@ body .student .container-card-student .card-2 .picture-profil-student {
   gap: 20px;
   border-radius: 8px;
 }
+@media screen and (max-width: 770px) {
+  body .student .container-card-student .card .picture-profil-student,
+  body .student .container-card-student .card-2 .picture-profil-student {
+    align-items: center;
+  }
+}
 body .student .container-card-student .card .picture-profil-student .image-student,
 body .student .container-card-student .card-2 .picture-profil-student .image-student {
   width: 100%;
+}
+@media screen and (max-width: 770px) {
+  body .student .container-card-student .card .picture-profil-student .image-student,
+  body .student .container-card-student .card-2 .picture-profil-student .image-student {
+    width: 95%;
+  }
 }
 body .student .container-card-student .card .picture-profil-student .profil-student,
 body .student .container-card-student .card-2 .picture-profil-student .profil-student {
@@ -367,6 +411,12 @@ body .student .container-card-student .card-2 .card-phrase-accroche .phrase-stud
 body .student .container-card-student .card-2 {
   flex-direction: row-reverse;
   background: #000000;
+  color: #fff;
+}
+body .student .container-card-student .card-2 #span-card-2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 body [data-aos] {
   transition-property: all;
@@ -413,6 +463,12 @@ body .actuality .container-card-student .card-actuality .picture-teamworker .tea
   gap: 15px;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  body .actuality .container-card-student .card-actuality .picture-teamworker .teamworker {
+    flex-direction: column;
+    align-items: start;
+  }
 }
 body .actuality .container-card-student .card-actuality .picture-teamworker .teamworker .title-name {
   width: 200px;
