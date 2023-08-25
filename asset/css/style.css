@@ -232,12 +232,11 @@ body .hero-home .title-hero-picture .title-span {
 }
 body .student {
   width: 100%;
-  margin: 100px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 1000px;
   overflow: hidden;
 }
 @media screen and (max-width: 770px) {
@@ -257,11 +256,18 @@ body .student .h2-student {
 body .student .container-card-student {
   width: 100%;
   margin: 50px auto;
-  overflow-y: auto;
   overflow-x: hidden;
-  height: 1300px;
+  overflow: scroll;
+  height: auto;
   z-index: 555;
   transition: transform 0.3s ease;
+}
+body .student .container-card-student::-webkit-scrollbar {
+  background-color: rgba(243, 12, 12, 0);
+  display: none;
+}
+body .student .container-card-student::-webkit-scrollbar-corner {
+  display: none;
 }
 @media screen and (max-width: 770px) {
   body .student .container-card-student {
@@ -273,26 +279,26 @@ body .student .container-card-student .card,
 body .student .container-card-student .card-2 {
   width: 100%;
   height: 100vh;
-  max-height: 90vh;
   display: flex;
   gap: 10px;
   align-items: center;
+  padding: 20px;
   justify-content: center;
-}
-@media screen and (max-width: 770px) {
-  body .student .container-card-student .card,
-  body .student .container-card-student .card-2 {
-    height: 63vh;
-  }
 }
 body .student .container-card-student .card .picture-profil-student,
 body .student .container-card-student .card-2 .picture-profil-student {
-  width: 450px;
+  width: 550px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
   display: flex;
   flex-direction: column;
   gap: 20px;
   border-radius: 8px;
+}
+@media screen and (max-width: 1100px) {
+  body .student .container-card-student .card .picture-profil-student,
+  body .student .container-card-student .card-2 .picture-profil-student {
+    width: 300px;
+  }
 }
 @media screen and (max-width: 770px) {
   body .student .container-card-student .card .picture-profil-student,
@@ -313,12 +319,12 @@ body .student .container-card-student .card-2 .picture-profil-student .image-stu
 body .student .container-card-student .card .picture-profil-student .profil-student,
 body .student .container-card-student .card-2 .picture-profil-student .profil-student {
   width: 100%;
-  max-width: 300px;
   padding: 5px;
 }
 @media screen and (max-width: 770px) {
   body .student .container-card-student .card .picture-profil-student .profil-student,
   body .student .container-card-student .card-2 .picture-profil-student .profil-student {
+    max-width: 300px;
     max-width: initial;
   }
 }
@@ -412,6 +418,7 @@ body .student .container-card-student .card-2 {
   flex-direction: row-reverse;
   background: #000000;
   color: #fff;
+  width: 100%;
 }
 body .student .container-card-student .card-2 #span-card-2 {
   color: #ffffff;
@@ -1098,4 +1105,37 @@ body .button-portfolio .svg-wrapper {
   background-color: rgba(255, 255, 255, 0.2);
   margin-left: 0.5em;
   transition: all 0.3s;
+}
+body footer {
+  background: #1E2833;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+body footer h1 {
+  text-align: center;
+  color: #ffffff;
+}
+body footer h1 span {
+  color: #D31E44;
+}
+body footer .footer-span {
+  display: flex;
+  gap: 10px;
+}
+body footer .footer-span span {
+  color: #fff;
+}
+body footer .social {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+body footer span {
+  color: #fff;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
