@@ -8,3 +8,6 @@ menuBurger.addEventListener('click', function () {
         navMenu.style.display = "block"; // Afficher le menu s'il est caché
     }
 });
+
+
+

@@ -8,6 +8,9 @@
     --title: 2.5rem;
 }
 
+$couleur-texte: rgb(215, 118, 142);
+
+
 body {
     width: 100%;
     font-family: 'baloo 2';
@@ -363,6 +366,7 @@ body {
                 overflow: auto;
             }
 
+
             .card,
             .card-2 {
                 width: 100%;
@@ -381,6 +385,17 @@ body {
                 // border: 1px solid red;
 
                 // align-items: center;
+                &:nth-child(odd) {
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 0.5rem;
+                }
+
+                &:nth-child(even) {
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 0.5rem;
+                    color: #fff;
+
+                }
 
 
                 .picture-profil-student {
@@ -414,6 +429,9 @@ body {
                         width: 100%;
                         // max-width: 300px;
                         padding: 5px;
+                        color: $couleur-texte;
+
+
 
                         @media screen and (max-width:770px) {
                             max-width: 300px;
@@ -425,10 +443,14 @@ body {
                             display: flex;
                             flex-direction: column;
 
+
+
                             span {
-                                color: #313237;
+                                color: $couleur-texte;
                                 font-size: 1.5rem;
                                 font-weight: 600;
+
+
                             }
                         }
 
@@ -512,28 +534,29 @@ body {
                     .phrase-student {
                         font-size: 2rem;
                         padding: 30px;
-                        color: #161B3D;
+                        color: $couleur-texte;
 
                     }
 
                 }
             }
 
-            .card-2 {
-                flex-direction: row-reverse;
-                background: #000000;
-                color: #fff;
-                width: 100%;
+            // .card-2 {
+            //     flex-direction: row-reverse;
+            //     color: #fff;
+            //     width: 100%;
 
 
 
-                #span-card-2 {
-                    color: #ffffff;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                }
+            //     #span-card-2 {
+            //         color: #ffffff;
+            //         font-size: 1.5rem;
+            //         font-weight: 600;
+            //     }
 
-            }
+            // }
+
+
         }
     }
 

@@ -285,6 +285,17 @@ body .student .container-card-student .card-2 {
   padding: 20px;
   justify-content: center;
 }
+body .student .container-card-student .card:nth-child(odd),
+body .student .container-card-student .card-2:nth-child(odd) {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+body .student .container-card-student .card:nth-child(even),
+body .student .container-card-student .card-2:nth-child(even) {
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  color: #fff;
+}
 body .student .container-card-student .card .picture-profil-student,
 body .student .container-card-student .card-2 .picture-profil-student {
   width: 550px;
@@ -320,6 +331,7 @@ body .student .container-card-student .card .picture-profil-student .profil-stud
 body .student .container-card-student .card-2 .picture-profil-student .profil-student {
   width: 100%;
   padding: 5px;
+  color: rgb(215, 118, 142);
 }
 @media screen and (max-width: 770px) {
   body .student .container-card-student .card .picture-profil-student .profil-student,
@@ -335,7 +347,7 @@ body .student .container-card-student .card-2 .picture-profil-student .profil-st
 }
 body .student .container-card-student .card .picture-profil-student .profil-student .name-profesionel span,
 body .student .container-card-student .card-2 .picture-profil-student .profil-student .name-profesionel span {
-  color: #313237;
+  color: rgb(215, 118, 142);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -412,18 +424,7 @@ body .student .container-card-student .card .card-phrase-accroche .phrase-studen
 body .student .container-card-student .card-2 .card-phrase-accroche .phrase-student {
   font-size: 2rem;
   padding: 30px;
-  color: #161B3D;
-}
-body .student .container-card-student .card-2 {
-  flex-direction: row-reverse;
-  background: #000000;
-  color: #fff;
-  width: 100%;
-}
-body .student .container-card-student .card-2 #span-card-2 {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 600;
+  color: rgb(215, 118, 142);
 }
 body [data-aos] {
   transition-property: all;
